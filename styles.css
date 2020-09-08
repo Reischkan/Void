@@ -1,0 +1,99 @@
+p{
+    color: aliceblue;
+    font-family: 'Libre Barcode 128 Text', cursive;
+    font-size-adjust: 18px;
+    
+}
+.p2{
+
+color: aliceblue;
+font-family: 'Homemade Apple', cursive;
+}
+.img{
+     margin-left: 25%;
+}
+.front{
+    margin-left: 10%;
+}
+h1{
+   color: goldenrod;
+
+   
+}
+body{
+
+
+    background-image:url(Does.jpg) ;
+    background-size: cover;
+
+}
+h2{
+    color: gray;
+}
+.lbl{
+    display: inline-block;
+    width: 65px;
+    height: 33px;
+    background: gray;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    transition: .1s;
+}
+.lbl::after{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 100px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    transition: .1s;
+}
+#switch:checked + .lbl::after{
+    left: 36px;
+}
+#switch:checked + .lbl{
+    background: darkred;
+}
+#switch{
+    display: none;}
+    ol{
+        color: rgb(39, 32, 2);
+    
+    }
+    label{
+        color: crimson;
+    }
+    #navegador ul{
+        list-style: none;
+        text-align: center;
+        }
+        #navegador li{
+            display: inline;
+            text-align: center;
+            margin: 0 10px 0 0;
+        }
+        #navegador li a{
+            padding: 2px 7px 2px 7px;
+            color: white;
+            background-color: darkred;
+            border: 1px solid rgb(17, 3, 3);
+            text-decoration: none;
+        }
+        html {
+            height: 100%;
+          }
+          html body {
+            height: 100%;
+            
+          }
+          html body .container-fluid.body-content {
+            position: absolute;
+            top: auto;
+            bottom: auto;
+            right: 0;
+            left: 0;
+          }
