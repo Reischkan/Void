@@ -1,30 +1,30 @@
+let error = document.getElementById("error");
+let Email = document.getElementById("inputEmail4").value;
+let password = document.getElementById("inputPassword4").value;
+let zip = document.getElementById("inputZip").value;
+let city = document.getElementById("inputCity").value;
+let elemento = document.getElementById("gridCheck");
+let form = document.getElementById("form");
 
-function validacion() {
-valor = document.getElementById("inputEmail4").value;
-if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor)) ) {
-    alert('[ERROR]');
-  return false;
-}
-valor = document.getElementById("inputPassword4").value;
-if( isNaN(valor) ) {
-    alert('[ERROR]');
-  return false;
-}
-valor = document.getElementById("inputZip").value;
-if( isNaN(valor) ) {
-    alert('[ERROR]');
-  return false;
-}
-valor = document.getElementById("inputCity").value;
-if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
-    alert('[ERROR]');
+form.addEventListener("submit",function(){
+  if(!(/\S+@\S+\.\S+/.test(Email))){
+    alert('ERROR: Debe escribir un correo válido');
     return false;
-  
-}
-elemento = document.getElementById("gridCheck");
-if( !elemento.checked ) {
-    alert('[ERROR]');
+  }
+  if( isNaN(password) ) {
+    alert('ERROR: Password invalido');
   return false;
 }
+
+if( isNaN(zip) ) {
+    alert('ERROR: Postal');
+  return false;
 }
-onsubmit="return validacion()"
+
+if( city == null || city.length == 0 || /^\s+$/.test(city) ) {
+    alert('ERROR: City');
+
+    return false;
+}
+}
+
