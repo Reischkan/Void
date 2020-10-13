@@ -1,4 +1,5 @@
 
+function validacion() {
 valor = document.getElementById("inputEmail4").value;
 if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor)) ) {
     alert('[ERROR]');
@@ -25,3 +26,5 @@ if( !elemento.checked ) {
     alert('[ERROR]');
   return false;
 }
+}
+onsubmit="return validacion()"
